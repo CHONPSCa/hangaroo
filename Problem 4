@@ -1,0 +1,28 @@
+secretWord = "zikret"
+lettersGuessed = []
+mistakesMade = 0
+availableLetters = []
+guess = input("Letter: ")
+
+import string
+print(string.ascii_lowercase)
+def Hangaroo(secretWord):
+    
+    while mistakesMade < 4:
+        if getWordGuessed(secretWord, lettersGuessed) == True:
+            print("win uwu")
+    
+            print("available letters:")    
+            print(getAvailableLetters(lettersGuessed))
+    
+        if guess in getAvailableLetters(lettersGuessed):
+            if guess in list(secretWord):
+                getGuessedWord(secretWord, lettersGuessed)
+                lettersGuessed.append(guess)
+            elif guess not in list(secretWord):
+                lettersGuessed.append(guess)
+                mistakesMade += 1
+    else:
+            if mistakesMade == 4:
+                print("u wost uwu")
+    
