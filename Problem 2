@@ -1,0 +1,9 @@
+def getGuessedWord(secretWord,lettersGuessed):
+    word=[]
+    for letter in list(secretWord):
+        if letter in lettersGuessed:
+            word.append(letter)
+        elif letter not in lettersGuessed:
+            word.append("_")
+            
+    return (word)
